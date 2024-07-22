@@ -1,0 +1,208 @@
+###This code is inspired from https://honeykidsasia.com/52-date-night-ideas-singapore/ as I was not sure of what to do in Singapore with my girlfriend. So I decided to create a randomizer to choose our date night. It also includes my journey to make it a little more complex with category and cost added to the list.
+
+import random
+
+date_night_ideas = [
+    "Movie night at home",
+    "Dinner at a fancy restaurant",
+    "Evening date at Marina Barrage",
+    "Cooking a new recipe together",
+    "Going to a comedy show",
+    "Visiting an art gallery",
+    "Taking a dance class",
+    "Going for a hike",
+    "Having a picnic",
+    "Exploring a nearby town",
+    "Going to a concert",
+    "Attending a sports event",
+    "Going to the beach",
+    "Visiting a museum",
+    "Going to an amusement park",
+    "Playing mini-golf",
+    "Going bowling",
+    "Having a game night",
+    "Building a fort at home",
+    "Taking a scenic drive",
+    "Visiting a zoo or aquarium",
+    "Going to a farmers market",
+    "Having a spa night at home",
+    "Taking a bike ride",
+    "Going to a wine tasting",
+    "Visiting a botanical garden",
+    "Going on a boat ride",
+    "Trying a new coffee shop",
+    "Having a themed movie marathon",
+    "Going ice skating",
+    "Visiting a historic site",
+    "Doing a puzzle together",
+    "Going to a planetarium",
+    "Having a DIY craft night",
+    "Exploring a new restaurant",
+    "Going to a food festival",
+    "Taking a yoga class",
+    "Visiting an escape room",
+    "Going horseback riding",
+    "Having a fondue night",
+    "Going to a trampoline park",
+    "Doing a photoshoot",
+    "Taking a pottery class",
+    "Going to a karaoke night",
+    "Visiting a science center",
+    "Going on a hot air balloon ride",
+    "Having a sushi night",
+    "Taking a painting class",
+    "Visiting an arcade",
+    "Going to a street fair",
+    "Having a breakfast date",
+    "Going to a play or musical"
+]
+
+# Function to pick a random date night idea, although not necessary
+def random_date_night(ideas):
+    return random.choice(ideas)
+
+# Print a random date night idea
+print(random_date_night(date_night_ideas))
+
+
+###Lets add some categorization and cost to the code
+
+
+date_night_ideas = [
+    {"idea": "Movie night at home", "category": "Relax", "cost": "$"},
+    {"idea": "Dinner at a fancy restaurant", "category": "Dinner", "cost": "$$$"},
+    {"idea": "Stargazing in the park", "category": "Nature", "cost": "$"},
+    {"idea": "Cooking a new recipe together", "category": "Relax", "cost": "$"},
+    {"idea": "Going to a comedy show", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an art gallery", "category": "Relax", "cost": "$$"},
+    {"idea": "Taking a dance class", "category": "Active", "cost": "$$"},
+    {"idea": "Going for a hike", "category": "Nature", "cost": "$"},
+    {"idea": "Having a picnic", "category": "Nature", "cost": "$"},
+    {"idea": "Exploring a nearby town", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a concert", "category": "Active", "cost": "$$$"},
+    {"idea": "Attending a sports event", "category": "Active", "cost": "$$$"},
+    {"idea": "Going to the beach", "category": "Nature", "cost": "$"},
+    {"idea": "Visiting a museum", "category": "Relax", "cost": "$$"},
+    {"idea": "Going to an amusement park", "category": "Active", "cost": "$$$"},
+    {"idea": "Playing mini-golf", "category": "Active", "cost": "$$"},
+    {"idea": "Going bowling", "category": "Active", "cost": "$$"},
+    {"idea": "Having a game night", "category": "Relax", "cost": "$"},
+    {"idea": "Building a fort at home", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a scenic drive", "category": "Nature", "cost": "$"},
+    {"idea": "Visiting a zoo or aquarium", "category": "Relax", "cost": "$$"},
+    {"idea": "Going to a farmers market", "category": "Shopping", "cost": "$"},
+    {"idea": "Having a spa night at home", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a bike ride", "category": "Nature", "cost": "$"},
+    {"idea": "Going to a wine tasting", "category": "Relax", "cost": "$$"},
+    {"idea": "Visiting a botanical garden", "category": "Nature", "cost": "$$"},
+    {"idea": "Going on a boat ride", "category": "Nature", "cost": "$$"},
+    {"idea": "Trying a new coffee shop", "category": "Relax", "cost": "$"},
+    {"idea": "Having a themed movie marathon", "category": "Relax", "cost": "$"},
+    {"idea": "Going ice skating", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting a historic site", "category": "Relax", "cost": "$"},
+    {"idea": "Doing a puzzle together", "category": "Relax", "cost": "$"},
+    {"idea": "Going to a planetarium", "category": "Relax", "cost": "$$"},
+    {"idea": "Having a DIY craft night", "category": "Relax", "cost": "$"},
+    {"idea": "Exploring a new restaurant", "category": "Dinner", "cost": "$$$"},
+    {"idea": "Going to a food festival", "category": "Dinner", "cost": "$$"},
+    {"idea": "Taking a yoga class", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an escape room", "category": "Active", "cost": "$$"},
+    {"idea": "Going horseback riding", "category": "Active", "cost": "$$"},
+    {"idea": "Having a fondue night", "category": "Dinner", "cost": "$$"},
+    {"idea": "Going to a trampoline park", "category": "Active", "cost": "$$"},
+    {"idea": "Doing a photoshoot", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a pottery class", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a karaoke night", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting a science center", "category": "Relax", "cost": "$$"},
+    {"idea": "Going on a hot air balloon ride", "category": "Nature", "cost": "$$$"},
+    {"idea": "Having a sushi night", "category": "Dinner", "cost": "$$"},
+    {"idea": "Taking a painting class", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an arcade", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a street fair", "category": "Shopping", "cost": "$"},
+    {"idea": "Having a breakfast date", "category": "Dinner", "cost": "$$"},
+    {"idea": "Going to a play or musical", "category": "Relax", "cost": "$$"}
+]
+
+# Function to pick a random date night idea
+def random_date_night(ideas):
+    idea = random.choice(ideas)
+    return f"Idea: {idea['idea']}\nCategory: {idea['category']}\nCost: {idea['cost']}"
+
+# Print a random date night idea
+print(random_date_night(date_night_ideas))
+
+
+###Added selected cost so i can choose if I want a cheap/okay/expensive date.
+
+import random
+
+# List of date night ideas with categories and cost indicators
+date_night_ideas = [
+    {"idea": "Movie night at home", "category": "Relax", "cost": "$"},
+    {"idea": "Dinner at a fancy restaurant", "category": "Dinner", "cost": "$$$"},
+    {"idea": "Stargazing in the park", "category": "Nature", "cost": "$"},
+    {"idea": "Cooking a new recipe together", "category": "Relax", "cost": "$"},
+    {"idea": "Going to a comedy show", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an art gallery", "category": "Relax", "cost": "$$"},
+    {"idea": "Taking a dance class", "category": "Active", "cost": "$$"},
+    {"idea": "Going for a hike", "category": "Nature", "cost": "$"},
+    {"idea": "Having a picnic", "category": "Nature", "cost": "$"},
+    {"idea": "Exploring a nearby town", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a concert", "category": "Active", "cost": "$$$"},
+    {"idea": "Attending a sports event", "category": "Active", "cost": "$$$"},
+    {"idea": "Going to the beach", "category": "Nature", "cost": "$"},
+    {"idea": "Visiting a museum", "category": "Relax", "cost": "$$"},
+    {"idea": "Going to an amusement park", "category": "Active", "cost": "$$$"},
+    {"idea": "Playing mini-golf", "category": "Active", "cost": "$$"},
+    {"idea": "Going bowling", "category": "Active", "cost": "$$"},
+    {"idea": "Having a game night", "category": "Relax", "cost": "$"},
+    {"idea": "Building a fort at home", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a scenic drive", "category": "Nature", "cost": "$"},
+    {"idea": "Visiting a zoo or aquarium", "category": "Relax", "cost": "$$"},
+    {"idea": "Going to a farmers market", "category": "Shopping", "cost": "$"},
+    {"idea": "Having a spa night at home", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a bike ride", "category": "Nature", "cost": "$"},
+    {"idea": "Going to a wine tasting", "category": "Relax", "cost": "$$"},
+    {"idea": "Visiting a botanical garden", "category": "Nature", "cost": "$$"},
+    {"idea": "Going on a boat ride", "category": "Nature", "cost": "$$"},
+    {"idea": "Trying a new coffee shop", "category": "Relax", "cost": "$"},
+    {"idea": "Having a themed movie marathon", "category": "Relax", "cost": "$"},
+    {"idea": "Going ice skating", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting a historic site", "category": "Relax", "cost": "$"},
+    {"idea": "Doing a puzzle together", "category": "Relax", "cost": "$"},
+    {"idea": "Going to a planetarium", "category": "Relax", "cost": "$$"},
+    {"idea": "Having a DIY craft night", "category": "Relax", "cost": "$"},
+    {"idea": "Exploring a new restaurant", "category": "Dinner", "cost": "$$$"},
+    {"idea": "Going to a food festival", "category": "Dinner", "cost": "$$"},
+    {"idea": "Taking a yoga class", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an escape room", "category": "Active", "cost": "$$"},
+    {"idea": "Going horseback riding", "category": "Active", "cost": "$$"},
+    {"idea": "Having a fondue night", "category": "Dinner", "cost": "$$"},
+    {"idea": "Going to a trampoline park", "category": "Active", "cost": "$$"},
+    {"idea": "Doing a photoshoot", "category": "Relax", "cost": "$"},
+    {"idea": "Taking a pottery class", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a karaoke night", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting a science center", "category": "Relax", "cost": "$$"},
+    {"idea": "Going on a hot air balloon ride", "category": "Nature", "cost": "$$$"},
+    {"idea": "Having a sushi night", "category": "Dinner", "cost": "$$"},
+    {"idea": "Taking a painting class", "category": "Active", "cost": "$$"},
+    {"idea": "Visiting an arcade", "category": "Active", "cost": "$$"},
+    {"idea": "Going to a street fair", "category": "Shopping", "cost": "$"},
+    {"idea": "Having a breakfast date", "category": "Dinner", "cost": "$$"},
+    {"idea": "Going to a play or musical", "category": "Relax", "cost": "$$"}
+]
+
+# Function to pick a random date night idea based on cost
+def random_date_night(ideas, cost):
+    filtered_ideas = [idea for idea in ideas if idea["cost"] == cost]
+    if filtered_ideas:
+        idea = random.choice(filtered_ideas)
+        return f"Idea: {idea['idea']}\nCategory: {idea['category']}\nCost: {idea['cost']}"
+    else:
+        return "No date night ideas found for the selected cost."
+
+# Choose the cost ($, $$, $$$)
+selected_cost = "$"  # Change this to your desired cost
+
+# Print a random date night idea based on the selected cost
+print(random_date_night(date_night_ideas, selected_cost))
